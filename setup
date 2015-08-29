@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+log() {
+	echo "$@"
+	"$@"
+}
+
+base=`dirname $0`
+log tar xzf "$base/maps.tgz" -C "$base"
+log tar xzf "$base/d2objects.tgz" -C "$base"
